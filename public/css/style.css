@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 55px;
+    font-weight: 500;
+    padding-top: 40%;
+}
+.container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.pushContainer{
+    text-align: center;
+}
+.pushBlock {
+    margin-top: -88px;
+    margin-bottom: 30px;
+}
+.push{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-image: url('/images/Hand-Touch-icon.png');
+    background-size: cover;
+    height: 350px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50%;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+.push:active{
+    background-image: url('/images/Hand-Touch-icon1.png');
+}
+.push img{
+    width:  40%;
+    height: 40%;
+}
+.facebookButton{
+    margin-top: 30px;
+}
+.name{
+    padding-top: 20px;
+}
+@media only screen and (max-width: 500px) {
+    .push{
+        height: 225px;
+    }
+    h2{
+        font-size: 30px;
+    }
+}
