@@ -36,8 +36,8 @@ return [
     ],
 
     'facebook' => [
-        'client_id' => '126402211368021',
-        'client_secret' => 'f5d775701cd0ecf705af575da7849dcd',
+        'client_id' => '1514825751917902',
+        'client_secret' => '60c4044d1964de126e4fa4eeb6a4761f',
         'redirect' => 'http://click.martialarts.am/login/facebook/callback',
     ],
 ];
