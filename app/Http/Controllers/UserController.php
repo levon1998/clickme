@@ -15,7 +15,11 @@ class UserController extends Controller
         $score = 0;
         if (Auth::check()) {
             $score = Score::where('user_id', Auth::user()->id)->first();
-            $score = $score->score;
+            if ($score) {
+                $score = $score->score;
+            } else {
+                $score = 0;
+            }
         }
         $leaders = Score::orderBy('score', 'desc')->limit(10)->get();
         return view('users.index', compact('score', 'leaders'));
