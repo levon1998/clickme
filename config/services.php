@@ -38,6 +38,6 @@ return [
     'facebook' => [
         'client_id' => '1514825751917902',
         'client_secret' => '60c4044d1964de126e4fa4eeb6a4761f',
-        'redirect' => 'http://push.loc/callback',
+        'redirect' => 'http://click.martialarts.am/callback',
     ],
 ];
