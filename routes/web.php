@@ -12,5 +12,8 @@
 */
 
 Route::get('/', 'UserController@index');
-Route::get('/login/facebook', 'LoginController@redirectToProvider');
-Route::get('/login/facebook/callback', 'LoginController@handleProviderCallback');
+Route::post('/save-result', 'UserController@save');
+Route::post('/export', 'UserController@export');
+
+Route::get('facebook', 'LoginController@redirectToProvider');
+Route::get('callback', 'LoginController@handleProviderCallback');

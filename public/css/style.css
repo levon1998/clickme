@@ -49,11 +49,48 @@ h2{
 .name{
     padding-top: 20px;
 }
+.myBest{
+    font-size:25px;
+}
+/*.timer{*/
+    /*display: none;*/
+    /*margin-top: 80px;*/
+    /*font-size: 30px;*/
+/*}*/
+.time{
+    font-size: 30px;
+    display: none;
+}
+.resault{
+    font-size: 30px;
+    display: none;
+}
+.resaultAndShare{
+    display: none;
+}
+.modal-header-success {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5cb85c;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 @media only screen and (max-width: 500px) {
     .push{
         height: 225px;
     }
     h2{
         font-size: 30px;
+    }
+    .time{
+        font-size: 20px;
+    }
+    .resault{
+        font-size: 20px;
     }
 }
