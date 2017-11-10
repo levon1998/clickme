@@ -43,20 +43,16 @@ class UserController extends Controller
             $score->user_id = Auth::user()->id;
             $score->save();
         }
-        return "success";
+        return "ok";
     }
     public function export(Request $request)
     {
-        return true;
-//        $data = $request->input('base64data');
-//        $image = explode('base64,',$data);
-//        $time =  microtime(true);
-//        $ip = $request->ip();
-//        $name = bcrypt($time.$ip);
-//        file_put_contents(base64_decode($image[1]));
-//        Image::make(file_get_contents($data->base64_image))->save('/uploadimg/'.$name);
-//        $share = new Share();
-//        $share->image = '/uploadimg/'.$name;
-//        $share->save();
+        $image = $request->input('image');
+        $filteredData=substr($image, strpos($image, ","));
+        $unencodedData=base64_decode($filteredData);
+        $time = microtime(true);
+
+        file_put_contents('images/share/'.$time.'.png', $unencodedData);
+        return public_path().'/images/share/'.$time.'.png';
     }
 }

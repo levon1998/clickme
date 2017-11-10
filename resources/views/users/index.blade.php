@@ -71,5 +71,25 @@
         </div>
     </div>
     <script src="{{ asset('js/html2canvas.min.js') }}"></script>
+{{--    <script src="{{ asset('js/FileSaver.min.js') }}"></script>--}}
+    <script>
+        $(document).ready(function(){
+            $('.shareFacebook').on('click', function(){
+                html2canvas($('.pushBlock'), {
+                    onrendered: function(canvas) {
+                        $.ajax({
+                            method: 'post',
+                            url: '/export',
+                            data: {image: canvas.toDataURL("image/png")},
+                            success: function(data){
+                                var image_path = data;
+                                $("meta[property='og:image']").attr('content', image_path);
+                            }
+                        })
+                    }
+                });
+            });
+        });
+    </script>
     <script src="{{ asset('js/main.js') }}"></script>
 @endsection

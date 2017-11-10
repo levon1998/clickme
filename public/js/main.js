@@ -27,23 +27,6 @@ $('.push').on('click', function () {
         setIntervalBool = false;
     }
 });
-$('.shareFacebook').on('click', function(){
-    html2canvas($('.push'), {
-        onrendered: function(canvas) {
-            // var img = canvas;
-            // var imgData = canvas.toDataURL('image/jpeg');
-            // var url = '/export';
-            // $.ajax({
-            //     type: "POST",
-            //     url: url,
-            //     dataType: 'text',
-            //     data: {
-            //         base64data : imgData
-            //     }
-            // });
-        }
-    });
-});
 
 $('.resetButton').on('click', function() {
     $('.pushCount').text('Click me');
@@ -66,5 +49,5 @@ function saveResault(count)
                 $('.myBest').children('span').text(count);
             }
         }
-    })
+    });
 }
