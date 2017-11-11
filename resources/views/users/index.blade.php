@@ -17,6 +17,10 @@
                 <div class="share">
                     <button type="button" class="btn btn-primary resetButton">Play Again</button>
                     <button type="button" class="btn btn-primary shareFacebook">Share with facebook</button>
+                    <div class="fb-share-button"
+                         data-href="http://www.your-domain.com/your-page.html"
+                         data-layout="button_count">
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,8 +85,7 @@
                             url: '/export',
                             data: {image: canvas.toDataURL("image/png")},
                             success: function(data){
-                                var image_path = data;
-                                $("meta[property='og:image']").attr('content', image_path);
+                                $("meta[property='og:image']").attr('content', data);
                             }
                         })
                     }
