@@ -17,10 +17,7 @@
                 <div class="share">
                     <button type="button" class="btn btn-primary resetButton">Play Again</button>
                     <button type="button" class="btn btn-primary shareFacebook">Share with facebook</button>
-                    <div class="fb-share-button"
-                         data-href="http://www.your-domain.com/your-page.html"
-                         data-layout="button_count">
-                    </div>
+                    <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
                 </div>
             </div>
         </div>
