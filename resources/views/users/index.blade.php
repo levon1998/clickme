@@ -71,7 +71,6 @@
         </div>
     </div>
     <script src="{{ asset('js/html2canvas.min.js') }}"></script>
-{{--    <script src="{{ asset('js/FileSaver.min.js') }}"></script>--}}
     <script>
         $(document).ready(function(){
             $('.shareFacebook').on('click', function(){

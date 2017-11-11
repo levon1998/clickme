@@ -53,6 +53,6 @@ class UserController extends Controller
         $time = microtime(true);
 
         file_put_contents('images/share/'.$time.'.png', $unencodedData);
-        return public_path().'/images/share/'.$time.'.png';
+        return url('/images/share/'.$time.'.png');
     }
 }
