@@ -16,8 +16,6 @@
                 <div class="resault">Your result is <span></span></div>
                 <div class="share">
                     <button type="button" class="btn btn-primary resetButton">Play Again</button>
-                    <button type="button" class="btn btn-primary shareFacebook">Share with facebook</button>
-                    <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
                 </div>
             </div>
         </div>
@@ -72,23 +70,5 @@
         </div>
     </div>
     <script src="{{ asset('js/html2canvas.min.js') }}"></script>
-    <script>
-        $(document).ready(function(){
-            $('.shareFacebook').on('click', function(){
-                html2canvas($('.pushBlock'), {
-                    onrendered: function(canvas) {
-                        $.ajax({
-                            method: 'post',
-                            url: '/export',
-                            data: {image: canvas.toDataURL("image/png")},
-                            success: function(data){
-                                $("meta[property='og:image']").attr('content', data);
-                            }
-                        })
-                    }
-                });
-            });
-        });
-    </script>
     <script src="{{ asset('js/main.js') }}"></script>
 @endsection
